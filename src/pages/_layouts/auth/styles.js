@@ -35,6 +35,13 @@ export const Content = styled.div`
       }
     }
 
+    span {
+      /* estilizando a mensagem de erro para os inputs vazios! */
+      color: #f64c75;
+      align-self: flex-start; /*p/ nao ficar no centro */
+      margin: 0 12px 10px;
+    }
+
     button {
       margin: 5px 0 0;
       height: 44px;
