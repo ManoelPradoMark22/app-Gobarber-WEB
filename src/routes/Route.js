@@ -5,7 +5,9 @@ import { Route, Redirect } from 'react-router-dom';
 import AuthLayout from '~/pages/_layouts/auth';
 import DefaultLayout from '~/pages/_layouts/default';
 
-import store from '~/store';
+import { store } from '~/store';
+/* importamos apenas o store (pq agr nao ta sendo exportado como default),
+já q no arquivo src/store/index.js ta exportando { store, persistor } */
 
 export default function RouteWrapper({
   component: Component, // com C maiusculo p/ usarmos como componente
