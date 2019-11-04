@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import { PersistGate } from 'redux-persist/integration/react';
 /* o PersistGate vai basicamente renderizar o conteudo que ele esta englobando
 SOMENTE depois de ele ter buscado as informacoes dentro do storage da aplicacao */
@@ -25,6 +26,7 @@ function App() {
         <Router history={history}>
           <Routes />
           <GlobalStyle />
+          <ToastContainer autoClose={3000} />
         </Router>
       </PersistGate>
     </Provider>
