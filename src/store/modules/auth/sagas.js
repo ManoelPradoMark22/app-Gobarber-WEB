@@ -28,6 +28,11 @@ export function* signIn({ payload }) {
       return;
     }
 
+    /* utilizamos o .defaults para setar infos q vao ser utilizadas em
+    TODAS as requisições */
+    // api.defaults.headers.['Authorization'] = `Bearer ${token}`;
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+
     yield put(signInSuccess(token, user));
 
     history.push('/dashboard');
@@ -58,7 +63,19 @@ export function* signUp({ payload }) {
   }
 }
 
+// esse saga nao tem nada assincrono entao chamamos normalmente
+export function setToken({ payload }) {
+  if (!payload) return;
+
+  const { token } = payload.auth;
+
+  if (token) {
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+  }
+}
+
 export default all([
+  takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
   takeLatest('@auth/SIGN_UP_REQUEST', signUp),
 ]);
