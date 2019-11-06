@@ -29,4 +29,4 @@ export function* updateProfile({ payload }) {
   }
 }
 
-export default all(takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile));
+export default all([takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile)]);
