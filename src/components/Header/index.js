@@ -20,7 +20,7 @@ export default function Header() {
 
           <Profile>
             <div>
-              <strong>Manoel Prado</strong>
+              <strong>Sou eu</strong>
               <Link to="/profile">Meu perfil</Link>
             </div>
             <img
