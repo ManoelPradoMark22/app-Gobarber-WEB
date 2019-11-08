@@ -41,11 +41,12 @@ export const NotificationList = styled.div`
   fazer com q fique ao centro, 130px p esq e 130 p direita, logo abaixo do
   sino de notificacao, bem alinhado*/
   top: calc(100% + 30px); /*alinha 30px p/  baixo*/
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   padding: 15px 5px;
-
   display: ${props => (props.visible ? 'block' : 'none')};
+
+  z-index: 1;
 
   &::before {
     content: '';
@@ -59,7 +60,7 @@ export const NotificationList = styled.div`
     /**abaixo faremos o triangulo: */
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 20px solid rgba(0, 0, 0, 0.7);
   }
 `;
 
@@ -70,6 +71,8 @@ export const Scroll = styled(PerfectScrollbar)`
 
 export const Notification = styled.div`
   color: #fff;
+
+  z-index: 5;
 
   /*pegamos a referencia da notificacao e toda notificacao SEGUIDA de uma
   notificacao anterior, nunca a primeira */

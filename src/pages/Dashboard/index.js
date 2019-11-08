@@ -14,6 +14,7 @@ import {
 import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt-BR';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { TiScissors } from 'react-icons/ti';
 
 import api from '~/services/api';
 
@@ -83,11 +84,18 @@ export default function Dashboard() {
 
       <ul>
         {schedule.map(time => (
-          <Time key={time.time} past={time.past} avaliable={!time.appointment}>
-            <strong>{time.time}</strong>
-            <span>
-              {time.appointment ? time.appointment.user.name : 'Em aberto'}
-            </span>
+          <Time key={time.time} past={time.past} available={!time.appointment}>
+            <div name="boxx">
+              <strong>{time.time}</strong>
+              <span>
+                {time.appointment ? time.appointment.user.name : 'Em aberto'}
+              </span>
+            </div>
+            {time.appointment ? (
+              <TiScissors className="tesoura" size={36} />
+            ) : (
+              ''
+            )}
           </Time>
         ))}
       </ul>
