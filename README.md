@@ -1,6 +1,7 @@
 # GoBarber WEB
-## Frontend web da aplicação GoBarber, desenvolvida em ReactJs durante o Bootcamp GoStack da Rocketseat. A aplicação está consumindo uma API produzida em NodeJs (também disponibilizada nos meus repositórios) e tem como função exibir os agendamentos do salão de beleza, realizados pelos clientes da versão mobile.
-### Outras funções também foram desenvolvidas, tais como login, cadastro, notificações, recebimento de email sobre cancelamento de determinado agendamento, edição de perfil (avatar, nome, email, senha), logout etc. 
+## Frontend web da aplicação GoBarber, desenvolvida em ReactJs durante o Bootcamp GoStack da Rocketseat.
+### A aplicação está consumindo uma API produzida em NodeJs (também disponibilizada nos meus repositórios) e tem como função exibir os agendamentos do salão de beleza, realizados pelos clientes da versão mobile.
+#### Outras funções também foram desenvolvidas, tais como login, cadastro, notificações, recebimento de email sobre cancelamento de determinado agendamento, edição de perfil (avatar, nome, email, senha), logout etc. 
 
 Para a aplicação funcionar, siga os passos:
 <ul>
