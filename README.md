@@ -20,3 +20,4 @@ Execute na raiz deste projeto "yarn start" para a aplicação rodar.
 
 </ul>
 
+![](gobarberweb.gif)
