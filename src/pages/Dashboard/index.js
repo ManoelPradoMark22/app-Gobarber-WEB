@@ -15,6 +15,7 @@ import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt-BR';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { TiScissors } from 'react-icons/ti';
+// import { IoMdTime } from 'react-icons/io';
 
 import api from '~/services/api';
 
@@ -91,11 +92,7 @@ export default function Dashboard() {
                 {time.appointment ? time.appointment.user.name : 'Em aberto'}
               </span>
             </div>
-            {time.appointment ? (
-              <TiScissors className="tesoura" size={36} />
-            ) : (
-              ''
-            )}
+            {time.appointment && <TiScissors className="tesoura" size={36} />}
           </Time>
         ))}
       </ul>
