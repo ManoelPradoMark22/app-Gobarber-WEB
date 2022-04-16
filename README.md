@@ -20,4 +20,5 @@ Execute na raiz deste projeto "yarn start" para a aplicação rodar.
 
 </ul>
 
-![GIF](gobarberweb.gif)
+https://user-images.githubusercontent.com/53825592/163689070-683509ef-4559-44f3-840e-1bc77434ff7e.mp4
+
